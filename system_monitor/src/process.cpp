@@ -18,45 +18,17 @@ Process::Process(const int id) :
     _command = LinuxParser::Command(_id);
 }
 
-// // TODO: Return this process's ID
-// int Process::Pid() { 
-//     return _id;
-// }
-
-// TODO: Return this process's CPU utilization
+/**
+ * @brief Return this process's CPU utilization
+ * 
+ * @return float 
+ */
 float Process::CpuUtilization() {
-    const int systemUpTime = LinuxParser::UpTime();
-    const int totalTimeActive = LinuxParser::ActiveJiffies(_id);
-    const int processUpTime = LinuxParser::UpTime(_id);
-    
-    const int totalTimeSinceStartUp = systemUpTime - processUpTime;
+    int systemUpTime = LinuxParser::UpTime();
+    int totalTimeActive = LinuxParser::ActiveJiffies(_id);
+    int processUpTime = LinuxParser::UpTime(_id);
+    int totalTimeSinceStartUp = systemUpTime - processUpTime;
 
     _cpuUtilization = static_cast<float>(totalTimeActive)/totalTimeSinceStartUp;
     return (_cpuUtilization);
 }
-
-// // TODO: Return the command that generated this process
-// string Process::Command() { 
-//     return _command; 
-// }
-
-// // TODO: Return this process's memory utilization
-// string Process::Ram() { 
-//     return LinuxParser::Ram(_id);
-// }
-
-// // TODO: Return the user (name) that generated this process
-// string Process::User() { 
-//     return _userName; 
-// }
-
-// // TODO: Return the age of this process (in seconds)
-// long int Process::UpTime() { 
-//     return LinuxParser::UpTime(_id); 
-// }
-
-// // TODO: Overload the "less than" comparison operator for Process objects
-// // REMOVE: [[maybe_unused]] once you define the function
-// bool Process::operator<(Process const& a) const { 
-//     return this->_cpuUtilization < a._cpuUtilization; 
-// }

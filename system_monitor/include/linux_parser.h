@@ -39,7 +39,6 @@ enum CPUStates {
   kSteal_,
   kGuest_,
   kGuestNice_,
-  null_
 };
 std::vector<long> CpuUtilization();
 long Jiffies();

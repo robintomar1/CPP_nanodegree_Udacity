@@ -6,7 +6,11 @@ Processor::Processor() :
     _previousWorking(LinuxParser::ActiveJiffies()),
     _previousTotal(_previousIdle + _previousWorking) {}
 
-// TODO: Return the aggregate CPU utilization
+/**
+ * @brief Return the aggregate CPU utilization
+ * 
+ * @return float 
+ */
 float Processor::Utilization() { 
     long currentIdle = LinuxParser::IdleJiffies(); 
     long currentWorking = LinuxParser::ActiveJiffies(); 
