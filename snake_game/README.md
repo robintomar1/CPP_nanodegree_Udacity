@@ -6,7 +6,7 @@ Game working:
 1. launch the executabele (after sucessfully build) : you will be tajen to the main menu with three options 
  
  	<img src="main_menu.png"/>
-2. Hover the cursor over the options to see the selectable option and select any option. Depending on what you choose you will be taken to the next window.
+2. Hover the cursor over the options to see the selectable option and select any option. Depending on what you choose you will be taken to the next window. High scores are updated after each game if the score beats any of the top 3 scores.
 
 	<img src="scores_window.png"/>
 
