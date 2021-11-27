@@ -2,7 +2,18 @@
 
 This project extends C++ Nanodegree Capstone project called Snake game
 
-<img src="snake_game.gif"/>
+Game working:
+1. launch the executabele (after sucessfully build) : you will be tajen to the main menu with three options 
+ 
+ 	<img src="main_menu.png"/>
+2. Hover the cursor over the options to see the selectable option and select any option. Depending on what you choose you will be taken to the next window.
+
+	<img src="scores_window.png"/>
+
+	<img src="game_window.png"/>
+3. you can move back from a window by using escape key.To pause the game use escape key. click on continue to continue
+	<img src="in_between_game.png"/>
+
 
 
 Project meets the following rubric points:
@@ -11,7 +22,7 @@ Project meets the following rubric points:
 	  multiple functions are created and used throughout the project.
 		eg.  int renderer.h and renderer.cpp files
 		     int RenderStartMenu(std::string str);
-  		   int RenderHighScores();
+  		     int RenderHighScores();
 		     void DrawCircle(SDL_Renderer * renderer, int centreX, int centreY, int radius);
 		     void setScores(int one,int two,int three)
 		     
